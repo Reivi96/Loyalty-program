@@ -56,12 +56,13 @@ export default function App() {
   };
 
   return (
+    
     <div
-      className="grid grid-cols-1 gap-2 md:grid-cols-3"
-      style={{ marginTop: "150px" }}
+      className="grid grid-cols-1 gap-2 md:grid-cols-1"
+      style={{ marginTop: "150px", maxWidth: "500px" }}
     >
-      <div style={{ position: "absolute", top: 30, left: 180 }}>
-        <img src="Raggruppa186.png" />
+      <div style={{ position: "absolute", top: 30, left: 10, right: 20 }}>
+        <img src="https://webidoochain.com/wp-content/uploads/2023/01/Raggruppa-25419.png" style={{maxWidth: "100%", height: "auto"}} />
       </div>
 
       <div>
@@ -99,7 +100,8 @@ export default function App() {
                   </thead>
                   <tbody>
                     <tr>
-                      <th>{balanceInfo.address}</th>
+                      
+                    <td style={{ maxWidth: '150px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>{balanceInfo.address}</td>
                       <td>{balanceInfo.balance}</td>
                     </tr>
                   </tbody>
@@ -176,5 +178,6 @@ export default function App() {
         </form>
       </div>
     </div>
+    
   );
 }
